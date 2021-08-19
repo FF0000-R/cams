@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <style>
         @font-face {
-          font-family: 'Hirosh';
-          src: url('/assets/HIROSHT.woff') format('woff'), /* Modern Browsers */
-               url('/assets/HIROSHT.TTF')  format('truetype'), /* Safari, Android, iOS */
+          font-family: 'Helvetica';
+          src: url('/assets/HELR45W.woff') format('woff'), /* Modern Browsers */
+               url('/assets/HELR45W.TTF')  format('truetype'), /* Safari, Android, iOS */
         }body{
             margin: 0;
             overflow: hidden;
@@ -28,7 +28,7 @@
             position: absolute;
             color: white;
             background-color: black;
-            font-family: 'helvetica', monospace;
+            font-family: 'Helvetica', sans-serif;
             right: 1vh;
             bottom: 1vh;
             padding-right: 1vw;
@@ -36,6 +36,25 @@
         }
         img {
             width: 100vw;
+            object-fit: cover;
+        }
+        .container {
+            display: flex;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 100vw;
+            z-index: -5;
+        }
+        .status {
+            margin: auto;
+            font-family: 'Helvetica', sans-serif;
+            font-weight: bolder;
+            font-size: 10vw;
+            background-color: red;
+            padding-left: 1vw;
+            padding-right: 1vw;
         }
         @media all and (max-width: 700px){
 
@@ -47,83 +66,238 @@
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="status">NO FEED</div>
+    </div>
     <div class="element">
         <div id="block">
             <div class="dice">
-                <div class="info">Bodmin - UK</div><!--beach-->
-                <img name="CCTV" src="http://2.217.197.80/mjpg/video.mjpg?timestamp=1629222160100" alt="CCTV" title="CCTV">
+                <div class="info">Houston - US</div><!--spillway / river-->
+                <img src="http://50.197.223.170:80/mjpg/video.mjpg">
             </div>
             <div class="dice">
-                <div class="info">Ho Chi Min - VN</div><!--server - needs force refresh-->
-                <img name="CCTV" src="http://113.161.66.92:8001/oneshotimage1" alt="CCTV" title="CCTV">
+                <div class="info">Amsterdam - NL</div><!--elevator-->
+                <img src="http://145.53.212.190:8001/mjpg/video.mjpg">
             </div>
             <div class="dice">
-                <div class="info">Bonn - DE</div><!--airport-->
-                <img name="CCTV" src="http://109.90.107.157/cgi-bin/faststream.jpg?stream=half&fps=15&rand=COUNTER" alt="CCTV" title="CCTV">
+                <div class="info">Kiev - UA</div><!--housing-->
+                <img src="http://78.27.189.141:80/mjpg/video.mjpg">
             </div>
             <div class="dice">
-                <div class="info">Copenhagen - DK</div><!--airport-->
-                <img name="CCTV" src="http://87.54.59.228:80/mjpg/video.mjpg" alt="CCTV" title="CCTV">
-            </div>
-            <div class="dice">
-                <div class="info">Naaldwijk - NL</div><!---->
-                <img name="CCTV" src="http://163.158.76.26:80/mjpg/video.mjpg" alt="CCTV" title="CCTV">
-            </div>
-            <div class="dice">
-                <div class="info">Nagoya - JP</div><!--solar array-->
-                <img name="CCTV" src="http://153.156.252.64:8001/-wvhttp-01-/GetOneShot?image_size=640x480&frame_count=1000000000" alt="CCTV" title="CCTV">
-            </div>
-            <div class="dice">
-                <div class="info">Saint Petersburg - RU</div><!--construction site-->
-                <img name="CCTV" src="http://31.134.142.210:80/mjpg/video.mjpg" alt="CCTV" title="CCTV">
-            </div>
-            <div class="dice">
-                <div class="info">Moscow - RU</div><!--construction site-->
-                <img name="CCTV" src="http://91.210.87.140:8082/mjpg/video.mjpg" alt="CCTV" title="CCTV">
-            </div>
-            <div class="dice">
-                <div class="info">Recife - BR</div><!--highay toll booth-->
-                <img name="CCTV" src="http://177.72.3.203:8001/mjpg/video.mjpg" alt="CCTV" title="CCTV">
-            </div>
-            <div class="dice">
-                <div class="info">Bucharest - RO</div><!--gas station-->
-                <img name="CCTV" src="http://93.122.229.165:9000/mjpg/video.mjpg" alt="CCTV" title="CCTV">
-            </div>
-            <div class="dice">
-                <div class="info">Perth Amboy - US</div><!--water park-->
-                <img name="CCTV" src="http://108.35.92.102:8083/mjpg/video.mjpg" alt="CCTV" title="CCTV">
+                <div class="info">Reykjavik - IS</div><!--marina / port-->
+                <img src="http://157.157.138.235:80/mjpg/video.mjpg">
             </div>
             <div class="dice">
                 <div class="info">Wroclaw - PL</div><!--tram-->
-                <img name="CCTV" src="http://5.185.73.15:80/mjpg/video.mjpg" alt="CCTV" title="CCTV">
+                <img src="http://5.185.73.15:80/mjpg/video.mjpg">
             </div>
             <div class="dice">
-                <div class="info">Moscow - RU</div><!--antennae-->
-                <img name="CCTV" src="http://83.239.123.252:80/mjpg/video.mjpg" alt="CCTV" title="CCTV">
+                <div class="info">Big Sky - US</div><!--mountain-->
+                <img src="http://76.75.8.120:80/mjpg/video.mjpg">
             </div>
             <div class="dice">
-                <div class="info">London - GB</div><!--automatic storage-->
-                <img name="CCTV" src="http://81.149.37.127:80/mjpg/video.mjpg" alt="CCTV" title="CCTV">
+                <div class="info">Tartu - EE</div><!--inside hall-->
+                <img src="http://193.40.60.204:10000/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Paris - FR</div><!--shop - sphere -->
+                <img src="http://80.12.90.221:8082/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Tranbjerg - DK</div><!--intersection - stoplights-->
+                <img src="http://62.242.189.219:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Asten - NL</div><!--tractors-->
+                <img src="http://46.243.27.218:82/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Tokyo - JP</div><!--dental office-->
+                <img src="http://210.249.39.236:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Tokyo - JP</div><!--port - crane - glitches-->
+                <img src="http://124.219.173.212:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Saint Petersburg - RU</div><!--parking-->
+                <img src="http://109.236.111.203:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Roubaix - FR</div><!--washing salon-->
+                <img src="http://109.190.32.149:82/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Millau - FR</div><!--wall - glitches-->
+                <img src="http://193.251.71.23:8080/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Campinas - BR</div><!--desk-->
+                <img src="http://143.106.161.110:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Arnold - GB</div><!--construction ?-->
+                <img src="http://81.187.169.212:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Ochtmissen - DE</div><!--square-->
+                <img src="http://212.68.79.187:80/cgi-bin/faststream.jpg?stream=half&fps=15&rand=COUNTER">
+            </div>
+            <div class="dice">
+                <div class="info">Novi Pazar - RS</div><!--street shop-->
+                <img src="http://93.87.72.254:8090/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Eugene - US</div><!--observatory-->
+                <img src="http://128.223.164.214:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Jessheim - NO</div><!--housing?-->
+                <img src="http://185.59.213.74:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Cesson-Sevigne - FR</div><!--shop?-->
+                <img src="http://217.128.232.33:8080/mjpg/video.mjpg">
             </div>
             <div class="dice">
                 <div class="info">Mount Laurel - US</div><!--server-->
-                <img name="CCTV" src="http://75.149.107.121:8081/mjpg/video.mjpg" alt="CCTV" title="CCTV">
+                <img src="http://75.149.107.121:8081/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Tucker - US</div><!--garden-->
+                <img src="http://99.42.39.171:82/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Leusden - NL</div><!--?-->
+                <img src="http://81.205.127.187:8080/cam_1.cgi">
+            </div>
+            <div class="dice">
+                <div class="info">Minneapolis - US</div><!--bikeraks-->
+                <img src="http://128.101.85.194:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Bologna - IT</div><!--offices-->
+                <img src="http://93.39.195.175:84/videostream.cgi?user=admin&pwd=">
+            </div>
+            <div class="dice">
+                <div class="info">Bregenz - AT</div><!--housing - pan-->
+                <img src="http://194.208.246.10:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Saarlouis - DE</div><!--?-->
+                <img src="http://188.210.45.124:80/cgi-bin/faststream.jpg?stream=half&fps=15&rand=COUNTER">
+            </div>
+            <div class="dice">
+                <div class="info">Osaka - JP</div><!--working?-->
+                <img src="http://203.138.220.33:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Juarez - MX</div><!--beach-->
+                <img src="http://201.174.12.243:1024/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">San Miguel - ES</div><!--terasse-->
+                <img src="http://159.147.186.225:88/mjpeg.cgi">
+            </div>
+            <div class="dice">
+                <div class="info">New York City - US</div><!--buidings - advert-->
+                <img src="http://69.38.143.114:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Bodmin - GB</div><!--beach-->
+                <img src="http://2.217.197.80/mjpg/video.mjpg?timestamp=1629222160100">
+            </div>
+            <div class="dice">
+                <div class="info">Ho Chi Min - VN</div><!--server - needs force refresh-->
+                <img src="http://113.161.66.92:8001/oneshotimage1">
+            </div>
+            <div class="dice">
+                <div class="info">Bonn - DE</div><!--airport-->
+                <img src="http://109.90.107.157/cgi-bin/faststream.jpg?stream=half&fps=15&rand=COUNTER">
+            </div>
+            <div class="dice">
+                <div class="info">Moscow - RU</div><!--construction site-->
+                <img src="http://91.210.87.140:8082/mjpg/video.mjpg">
             </div>
             <div class="dice">
                 <div class="info">Seoul - KR</div><!--server-->
-                <img name="CCTV" src="http://218.236.43.4:10000/mjpg/video.mjpg" alt="CCTV" title="CCTV">
+                <img src="http://218.236.43.4:10000/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Saint Petersburg - RU</div><!--highway advert-->
+                <img src="http://178.176.107.78:82/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Naaldwijk - NL</div><!---->
+                <img src="http://163.158.76.26:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Nagoya - JP</div><!--solar array-->
+                <img src="http://153.156.252.64:8001/-wvhttp-01-/GetOneShot?image_size=640x480&frame_count=1000000000">
+            </div>
+            <div class="dice">
+                <div class="info">Saint Petersburg - RU</div><!--construction site-->
+                <img src="http://31.134.142.210:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Recife - BR</div><!--highay toll booth-->
+                <img src="http://177.72.3.203:8001/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Bucharest - RO</div><!--gas station-->
+                <img src="http://93.122.229.165:9000/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Perth Amboy - US</div><!--water park-->
+                <img src="http://108.35.92.102:8083/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Moscow - RU</div><!--antennae-->
+                <img src="http://83.239.123.252:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Copenhagen - DK</div><!--airport-->
+                <img src="http://87.54.59.228:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">London - GB</div><!--automatic storage-->
+                <img src="http://81.149.37.127:80/mjpg/video.mjpg">
             </div>
             <div class="dice">
                 <div class="info">N/A - XX</div><!--N/A-->
-                <img name="CCTV" src="http://45.11.165.165:8080/mjpg/video.mjpg" alt="CCTV" title="CCTV">
+                <img src="http://45.11.165.165:8080/mjpg/video.mjpg">
             </div>
             <div class="dice">
                 <div class="info">Bucharest - RO</div><!--housing complex-->
-                <img name="CCTV" src="http://46.97.42.102/cgi-bin/faststream.jpg?stream=full&fps=0.5&rand=161149" alt="CCTV" title="CCTV">
+                <img src="http://46.97.42.102/cgi-bin/faststream.jpg?stream=full&fps=0.5&rand=161149">
             </div>
             <div class="dice">
                 <div class="info">California - US</div><!--road-->
-                <img name="CCTV" src="http://166.165.35.32/mjpg/video.mjpg" alt="CCTV" title="CCTV">
+                <img src="http://166.165.35.32/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Asahi - JP</div><!--advert-->
+                <img src="http://218.219.195.166:8081/-wvhttp-01-/GetOneShot?image_size=640x480&frame_count=1000000000">
+            </div>
+            <div class="dice">
+                <div class="info">Falun - SE</div><!--N/A-->
+                <img src="http://85.89.83.58:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Kalmar - SE</div><!--golf green-->
+                <img src="http://194.237.137.183:8082/cgi-bin/faststream.jpg?stream=half&fps=15&rand=COUNTER">
+            </div>
+            <div class="dice">
+                <div class="info">Schwanewede - DE</div><!--city-->
+                <img src="http://2.207.4.114:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Otsu - JP</div><!--bridge-->
+                <img src="http://218.228.198.72:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Stratzing - AT</div><!--city pan-->
+                <img src="http://62.93.122.212:80/mjpg/video.mjpg">
             </div>
         </div>
     </div>

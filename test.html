@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cams</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+          font-family: 'Helvetica';
+          src: url('/assets/HELR45W.woff') format('woff'), /* Modern Browsers */
+               url('/assets/HELR45W.TTF')  format('truetype'), /* Safari, Android, iOS */
+        }body{
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        .dice{
+            font-size: 5vw;
+            text-align: center;
+            font-weight: bolder;
+        }
+        #block{
+            margin: auto;
+        }
+        .info {
+            position: absolute;
+            color: white;
+            background-color: black;
+            font-family: 'Helvetica', sans-serif;
+            right: 1vh;
+            bottom: 1vh;
+            padding-right: 1vw;
+            padding-left: 1vw;
+        }
+        img {
+            width: 100vw;
+            object-fit: cover;
+        }
+        .container {
+            display: flex;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 100vw;
+            z-index: -5;
+        }
+        .status {
+            margin: auto;
+            font-family: 'Helvetica', sans-serif;
+            font-weight: bolder;
+            font-size: 10vw;
+            background-color: red;
+            padding-left: 1vw;
+            padding-right: 1vw;
+        }
+        @media all and (max-width: 700px){
+
+            img {
+                height: 100vh;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <div class="status">NO FEED</div>
+        </div>
+    <div class="element">
+        <div id="block">
+            <div class="dice">
+                <div class="info">Houston A - US</div><!--spillway / river-->
+                <img src="http://50.197.223.170:80/mjpg/video.mjpg">
+            </div>            
+            <div class="dice">
+                <div class="info">Houston B - US</div><!--spillway-->
+                <img src="http://50.197.223.169:80/mjpg/video.mjpg">
+            </div>
+            <div class="dice">
+                <div class="info">Kiev - UA</div><!--housing-->
+                <img src="http://78.27.189.141:80/mjpg/video.mjpg">
+            </div>
+        </div>
+    </div>
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("dice");
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 10000);
+        }
+    </script>
+</body>
+</html>
